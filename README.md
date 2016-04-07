@@ -1,0 +1,2 @@
+# QtApp
+To study QT.
