@@ -6,6 +6,7 @@
 namespace Ui {
 class MainDialog;
 }
+class KeyInput;
 
 class MainDialog : public QDialog
 {
@@ -17,12 +18,11 @@ public:
 
 
 public slots:
-    void on_print();
-    void on_scan();
-    void on_to_home();
+    void on_switch_page();
 
 private:
     Ui::MainDialog *ui;
+    KeyInput       *keyInput;
 };
 
 #endif // MAINDIALOG_H

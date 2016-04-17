@@ -13,13 +13,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    maindialog.cpp
+    maindialog.cpp \
+    keyinput.cpp
 
 HEADERS  += \
-    maindialog.h
+    maindialog.h \
+    keyinput.h
 
 FORMS    += \
-    maindialog.ui
+    maindialog.ui \
+    keyinput.ui
 
 RESOURCES += \
     imgres.qrc

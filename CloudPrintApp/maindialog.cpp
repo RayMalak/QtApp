@@ -1,5 +1,7 @@
 #include "maindialog.h"
 #include "ui_maindialog.h"
+#include "keyinput.h"
+
 
 MainDialog::MainDialog(QWidget *parent) :
     QDialog(parent),
@@ -7,8 +9,12 @@ MainDialog::MainDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->pushButtonPrint, SIGNAL(clicked(bool)), SLOT(on_print()));
-    connect(ui->pushButtonReturnHome, SIGNAL(clicked(bool)), SLOT(on_to_home()));
+    keyInput = new KeyInput(ui->pagePrint);
+
+    //ui->pagePrint->layout()->addWidget(keyInput);
+
+    //ui->verticalLayoutPrintPage->addWidget(keyInput);
+    ui->pagePrint->layout()->addWidget(keyInput);
 }
 
 MainDialog::~MainDialog()
@@ -16,20 +22,20 @@ MainDialog::~MainDialog()
     delete ui;
 }
 
-void MainDialog::on_print()
-{
-    ui->stackedWidgetLeft->setCurrentWidget(ui->pagePrint);
-    ui->stackedWidgetRight->setCurrentWidget(ui->pageFlow);
-}
 
-void MainDialog::on_scan()
+void MainDialog::on_switch_page()
 {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
 
-}
-
-void MainDialog::on_to_home()
-{
-    ui->stackedWidgetLeft->setCurrentWidget(ui->pageAd);
-    ui->stackedWidgetRight->setCurrentWidget(ui->pageHome);
+    if(button == ui->pushButtonPrint)
+    {
+        ui->stackedWidgetLeft->setCurrentWidget(ui->pagePrint);
+        ui->stackedWidgetRight->setCurrentWidget(ui->pageFlow);
+    }
+    else if(button == ui->pushButtonReturnHome)
+    {
+        ui->stackedWidgetLeft->setCurrentWidget(ui->pageAd);
+        ui->stackedWidgetRight->setCurrentWidget(ui->pageHome);
+    }
 }
 

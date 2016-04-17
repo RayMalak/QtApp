@@ -70,28 +70,41 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <widget class="QPushButton" name="pushButtonReturnHome">
+      <widget class="QWidget" name="">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>290</y>
-         <width>75</width>
-         <height>23</height>
+         <x>40</x>
+         <y>31</y>
+         <width>158</width>
+         <height>62</height>
         </rect>
        </property>
-       <property name="text">
-        <string>返回</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>90</y>
-         <width>113</width>
-         <height>20</height>
-        </rect>
-       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButtonFromBarcode">
+          <property name="text">
+           <string>二维码取件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButtonFromID">
+          <property name="text">
+           <string>验证码取件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayoutPrintPage"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="pushButtonReturnHome">
+          <property name="text">
+           <string>返回</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </widget>
@@ -129,7 +142,7 @@
         </sizepolicy>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="pageHome">
         <property name="sizePolicy">
@@ -195,8 +208,41 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButtonPrint</sender>
+   <signal>clicked()</signal>
+   <receiver>MainDialog</receiver>
+   <slot>on_switch_page()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonReturnHome</sender>
+   <signal>clicked()</signal>
+   <receiver>MainDialog</receiver>
+   <slot>on_switch_page()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>tohome()</slot>
+  <slot>on_switch_page()</slot>
  </slots>
 </ui>
