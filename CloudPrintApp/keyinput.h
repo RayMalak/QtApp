@@ -1,10 +1,20 @@
+/**
+  @file keyinput.h
+  @brief 数字键盘widget
+  @author raym
+  @version 1.0
+  @date 2016-04-20
+  #update
+**/
+
+
 #ifndef KEYINPUT_H
 #define KEYINPUT_H
 
 #include <QWidget>
 
 namespace Ui {
-class KeyInput;
+class NumKeyInput;
 }
 
 class KeyInput : public QWidget
@@ -15,12 +25,18 @@ public:
     explicit KeyInput(QWidget *parent = 0);
     ~KeyInput();
 
-public slots:
+private slots:
     void numClick();
-    void cleanClick();
+    void on_pbOK_clicked();
+    void on_pbClean_clicked();
 
-private:
-    Ui::KeyInput *ui;
+signals:
+    /// 输入完成后触发的信号
+    void sig_inputFinished(qlonglong);
+
+
+public:
+    Ui::NumKeyInput *ui;
 };
 
 #endif // KEYINPUT_H

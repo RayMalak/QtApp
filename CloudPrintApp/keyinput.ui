@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>KeyInput</class>
- <widget class="QWidget" name="KeyInput">
+ <class>NumKeyInput</class>
+ <widget class="QWidget" name="NumKeyInput">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,11 +25,11 @@
     </widget>
    </item>
    <item>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1,1" rowminimumheight="1,1,1,1">
      <item row="0" column="0">
       <widget class="QPushButton" name="pbNum1">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -37,12 +37,18 @@
        <property name="text">
         <string>1</string>
        </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="pbNum2">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -55,7 +61,7 @@
      <item row="0" column="2">
       <widget class="QPushButton" name="pbNum3">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -68,7 +74,7 @@
      <item row="1" column="0">
       <widget class="QPushButton" name="pbNum4">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -81,7 +87,7 @@
      <item row="1" column="1">
       <widget class="QPushButton" name="pbNum5">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -94,7 +100,7 @@
      <item row="1" column="2">
       <widget class="QPushButton" name="pbNum6">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -107,7 +113,7 @@
      <item row="2" column="0">
       <widget class="QPushButton" name="pbNum7">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -120,7 +126,7 @@
      <item row="2" column="1">
       <widget class="QPushButton" name="pbNum8">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -133,7 +139,7 @@
      <item row="2" column="2">
       <widget class="QPushButton" name="pbNum9">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -146,7 +152,7 @@
      <item row="3" column="0">
       <widget class="QPushButton" name="pbNum0">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -157,9 +163,9 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QPushButton" name="pbClear">
+      <widget class="QPushButton" name="pbClean">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -172,7 +178,7 @@
      <item row="3" column="2">
       <widget class="QPushButton" name="pbOK">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
