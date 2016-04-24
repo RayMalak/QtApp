@@ -7,13 +7,13 @@ namespace Ui {
 class KeyInput;
 }
 
-class KeyInput : public QWidget
+class KeyInputWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit KeyInput(QWidget *parent = 0);
-    ~KeyInput();
+    explicit KeyInputWidget(QWidget *parent = 0);
+    ~KeyInputWidget();
 
 public slots:
     void numClick();

@@ -9,12 +9,11 @@ MainDialog::MainDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    keyInput = new KeyInput(ui->pagePrint);
+    keyInput = new KeyInputWidget(this);
+    ui->verticalLayoutPrintPage->addWidget(keyInput);
 
-    //ui->pagePrint->layout()->addWidget(keyInput);
-
-    //ui->verticalLayoutPrintPage->addWidget(keyInput);
-    ui->pagePrint->layout()->addWidget(keyInput);
+    ui->stackedWidgetLeft->setCurrentIndex(0);
+    ui->stackedWidgetRight->setCurrentIndex(0);
 }
 
 MainDialog::~MainDialog()
@@ -37,5 +36,10 @@ void MainDialog::on_switch_page()
         ui->stackedWidgetLeft->setCurrentWidget(ui->pageAd);
         ui->stackedWidgetRight->setCurrentWidget(ui->pageHome);
     }
+}
+
+void MainDialog::on_keyinput_ok()
+{
+    ui->pushButtonReturnHome->click();
 }
 

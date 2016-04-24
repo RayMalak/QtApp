@@ -1,7 +1,8 @@
+#include <QMessageBox>
 #include "keyinput.h"
 #include "ui_keyinput.h"
 
-KeyInput::KeyInput(QWidget *parent) :
+KeyInputWidget::KeyInputWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::KeyInput)
 {
@@ -17,27 +18,29 @@ KeyInput::KeyInput(QWidget *parent) :
     connect(ui->pbNum7, SIGNAL(clicked(bool)), SLOT(numClick()));
     connect(ui->pbNum8, SIGNAL(clicked(bool)), SLOT(numClick()));
     connect(ui->pbNum9, SIGNAL(clicked(bool)), SLOT(numClick()));
-    connect(ui->pbNum0, SIGNAL(clicked(bool)), SLOT(numClick()));
     connect(ui->pbClear, SIGNAL(clicked(bool)), SLOT(cleanClick()));
+   // connect(ui->pbOK, SIGNAL(clicked(bool)), parent, SLOT(on_keyinput_ok));
 }
 
-KeyInput::~KeyInput()
+KeyInputWidget::~KeyInputWidget()
 {
     delete ui;
 }
 
-void KeyInput::numClick()
+void KeyInputWidget::numClick()
 {
     QPushButton* button = qobject_cast<QPushButton*>(sender());
 
-    if(ui->numDisplay->text() == tr("0") && button->text() == tr("0"))
-        return;
-
     ui->numDisplay->setText(ui->numDisplay->text() + button->text());
+
 }
 
-void KeyInput::cleanClick()
+void KeyInputWidget::cleanClick()
 {
-    ui->numDisplay->text().remove(
-                ui->numDisplay->text().length()-1, 1);
+    ui->numDisplay->setText(
+                ui->numDisplay->text().remove(
+                            ui->numDisplay->text().length()-1, 1)
+                );
 }
+
+
