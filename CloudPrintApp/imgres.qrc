@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>res/airPrinter.jpg</file>
-        <file>res/barcode.png</file>
-        <file>res/mfpPrinter.jpg</file>
-    </qresource>
-</RCC>

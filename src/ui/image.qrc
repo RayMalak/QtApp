@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../res/barcode.png</file>
+        <file>../res/flowchart0.png</file>
+        <file>../res/miniPrinter.png</file>
+    </qresource>
+</RCC>

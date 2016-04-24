@@ -5,7 +5,7 @@
 3. 在layoutRight中创建labelBarcode用于显示二维码，下面添加一个StackLayoutRight用于切换页面
 
 /// 页面添加
-1. 在StackLayoutLeft中添加页面：广告页，验证码【二维码】取证页，证件扫描页，支付页，打印预览页等，这个页面栈叫做用户操作页面栈。
+1. 在StackLayoutLeft中添加页面：广告页，验证码【二维码】取证页，证件扫描页，支付页，打印预览页等。
 2. 在StackLayoutRight中添加页面：首页功能选择页，操作流程页。
 
 /// 信号和槽绑定
@@ -15,6 +15,9 @@
 页面切换槽（to_pre_page）
 
 将用户操作页面栈中每个页面的页面切换按钮click信号与MainDialog的to_xx_page绑定
+
+///< 2016.4.16
+
 
 
 
